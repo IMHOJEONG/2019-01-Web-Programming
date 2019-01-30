@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style>
+        div {
+            border: 10px solid red;
+            font-size: 20px;
+        }
+        
+        #container {
+            display: grid;
+            border-color: blue;
+            /* grid-template-columns: 50px 100px 100px; */
+            grid-template-columns: 100px 1fr 1fr;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>LEFT</div>
+        <div>CENTER</div>
+        <div>RIGHT</div>
+    </div>
+    <div>NEW LINE</div>
+</body>
+
+</html>
