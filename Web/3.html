@@ -18,14 +18,30 @@
 
         </ol>
         <div>
+            <input type="text">
+            <!-- 위에는 텍스트 필드 -->
+
             <input type="button" value="night" onclick="
+                 var body = document.querySelector('body');
+                 body.style.backgroundColor = 'white';
+                 body.style.color = 'black';
+            ">
+            <input type="button" value="day" onclick="
+                 var body = document.querySelector('body');
+                 body.style.backgroundColor = 'black';
+                 body.style.color = 'white';
+            ">
+            <!-- body 태그의 스타일 속성을 Javascript로 추가?  -->
+
+
+            <!-- <input type="button" value="night" onclick="
             document.querySelector('body').style.backgroundColor = 'black';
             document.querySelector('body').style.color = 'white';
             ">
             <input type="button" value="day" onclick="
               document.querySelector('body').style.backgroundColor = 'white';
               document.querySelector('body').style.color = 'black';
-              ">
+              "> -->
 
 
             <h2>JAVAScript</h2>
@@ -34,6 +50,9 @@
 
     </div>
     <script>
+        var body = document.querySelector('body');
+        body.style.backgroundColor = 'black';
+        body.style.color = 'white';
     </script>
 
 </body>
