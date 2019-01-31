@@ -18,10 +18,36 @@
 
         </ol>
         <div>
-            <input type="text" onchange="">
+            <!-- <input type="text" onchange=""> -->
             <!-- 위에는 텍스트 필드 -->
 
-            <input type="button" value="night" onclick="
+            <input id="day_night" type="button" value="night" onclick="
+
+                var body = document.querySelector('body');
+
+                // document.querySelector('#day_night')
+
+                // 만약에 이 버튼의 value 값이 night 라면 
+                if(this.value === 'night'){
+
+                    body.style.backgroundColor = 'black';
+                     body.style.color = 'white';
+                     // + 이 버튼의 value 값#을 day로 바꾸어주어야 한다. 
+                     this.value = 'day';
+                }
+                // night가 아니라면
+                else{
+                    body.style.backgroundColor = 'white';
+                    body.style.color = 'black';
+                    this.value = 'night'
+                }
+                
+
+                
+            ">
+
+
+            <!-- <input type="button" value="night" onclick="
                  var body = document.querySelector('body');
                  body.style.backgroundColor = 'white';
                  body.style.color = 'black';
@@ -30,7 +56,7 @@
                  var body = document.querySelector('body');
                  body.style.backgroundColor = 'black';
                  body.style.color = 'white';
-            ">
+            "> -->
             <!-- body 태그의 스타일 속성을 Javascript로 추가?  -->
 
 
