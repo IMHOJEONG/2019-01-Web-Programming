@@ -92,3 +92,57 @@
 </body>
 
 </html>
+
+<!doctype html>
+<html>
+
+<!-- 강사님의 추가내용
+     <head>
+    <title>WEB - JavaScript</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="container">
+        <ol>
+            <li><a href="1.html">html</a></li>
+            <li><a href="2.html">css</a></li>
+            <li><a href="3.html">javascript</a></li>
+            <li><a href="4.html">Node.js</a></li>
+        </ol>
+        <div>
+            <script>
+                function toggleDayNight(self, mode){
+                    if(mode === 'day'){
+                        var backgroundColor = 'white';
+                        var fontColor = 'black';
+                        var label = 'night';
+                    } else {
+                        var backgroundColor = 'black';
+                        var fontColor = 'white';
+                        var label = 'day';
+                    }
+                    var body = document.querySelector('body');
+                    body.style.backgroundColor = backgroundColor;
+                    body.style.color = fontColor;
+                    //이 버튼의 value 값을 day로 바꿔!
+                    self.value = label;
+                    //이 웹페이지에 있는 모든 a 태그의 폰트 색을 white로 바꿔!
+                    var list = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < list.length){
+                        list[i].style.color = fontColor;
+                        i = i + 1;
+                    } 
+                  }
+            </script>
+            <input id="day_night" type="button" value="night" onclick="
+                toggleDayNight(this, this.value);
+            ">
+            <h2>JavaScript</h2>
+            JavaScript is Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, veniam.
+        </div>
+    </div>
+</body> -->
