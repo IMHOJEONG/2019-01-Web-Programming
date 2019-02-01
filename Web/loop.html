@@ -6,6 +6,25 @@
 </head>
 
 <body>
+    <h1>Array</h1>
+    <script>
+        var member = ['a', 'b', 'c', 'd', 'e', 'f'];
+        document.write(member[1] + '<br>');
+        document.write(member.length + '<br>');
+        member.push('new');
+        document.write(member[6]);
+    </script>
+
+    <h1>Array + Loop</h1>
+    <script>
+        var member = ['a', 'b', 'c', 'd', 'e', 'f'];
+        var i = 0;
+        while (i < member.length) {
+            document.write('<li>' + member[i] + '</li>');
+            i = i + 1;
+        }
+    </script>
+
     <h1>Loop</h1>
     <script>
         // if ( /*boolean이 안에 들어감*/
@@ -13,11 +32,16 @@
         // ) {
         //     document.write(1);
         // }
-
+        var i = 0;
         document.write('1<br>');
-        while ( /*boolean의 값이 true인 동안 안의 내용이 실행됨*/ ) {
-
+        while ( /*boolean의 값이 true인 동안 안의 내용이 실행됨*/
+            i < 3
+        ) {
+            document.write('2<br>');
+            document.write('3<br>');
+            i++;
         }
+        document.write('4<br>');
     </script>
 </body>
 
