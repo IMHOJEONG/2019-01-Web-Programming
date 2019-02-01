@@ -22,7 +22,6 @@
                 function toggle() {
                     var body = document.querySelector('body');
 
-                    // document.querySelector('#day_night')
                     function toDay() {
                         body.style.backgroundColor = 'black';
                         body.style.color = 'white';
@@ -50,13 +49,28 @@
                             i = i + 1;
                         }
                     }
+
+                    function toggleDayNight(input) {
+                        if (input === 'night') {
+                            toDay();
+                        } else {
+                            toNight();
+                        }
+                    }
+
+                    // document.querySelector('#day_night')
+
+
+
                     // 만약에 이 버튼의 value 값이 night 라면 
                     if (this.value === 'night') {
-                        toDay();
+                        //toDay();
+                        toggleDayNight('night');
                     }
                     // night가 아니라면
                     else {
-                        toNight();
+                        // toNight();
+                        toggleDayNight('day');
                     }
                 }
             </script>
