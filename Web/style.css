@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
 body {
     margin: 0px;
+    font-family: 'Anton', sans-serif;
+}
+
+input {
+    font-family: 'Anton', sans-serif;
 }
 
 h1 {
