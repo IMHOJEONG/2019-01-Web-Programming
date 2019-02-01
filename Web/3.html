@@ -18,76 +18,54 @@
 
         </ol>
         <div>
+            <script>
+                function toggle() {
+                    var body = document.querySelector('body');
+
+                    // document.querySelector('#day_night')
+                    function toDay() {
+                        body.style.backgroundColor = 'black';
+                        body.style.color = 'white';
+                        // + 이 버튼의 value 값#을 day로 바꾸어주어야 한다. 
+                        this.value = 'day';
+                        // 이 웹페이지에 있는 모든 a 태그의 폰트 색을 white로 바꾸고 싶다.
+                        var links = document.querySelectorAll('a');
+                        var i = 0;
+                        while (i < links.length) {
+                            links[i].style.color = 'white';
+                            i = i + 1;
+                        }
+                    }
+
+                    function toNight() {
+                        body.style.backgroundColor = 'white';
+                        body.style.color = 'black';
+                        this.value = 'night';
+
+                        // 이 웹페이지에 있는 모든 a 태그의 폰트 색을 white로 바꾸고 싶다.
+                        var links = document.querySelectorAll('a');
+                        var i = 0;
+                        while (i < links.length) {
+                            links[i].style.color = 'black';
+                            i = i + 1;
+                        }
+                    }
+                    // 만약에 이 버튼의 value 값이 night 라면 
+                    if (this.value === 'night') {
+                        toDay();
+                    }
+                    // night가 아니라면
+                    else {
+                        toNight();
+                    }
+                }
+            </script>
             <!-- <input type="text" onchange=""> -->
             <!-- 위에는 텍스트 필드 -->
 
             <input id="day_night" type="button" value="night" onclick="
-
-                var body = document.querySelector('body');
-
-                // document.querySelector('#day_night')
-
-                // 만약에 이 버튼의 value 값이 night 라면 
-                if(this.value === 'night'){
-
-                    body.style.backgroundColor = 'black';
-                     body.style.color = 'white';
-                     // + 이 버튼의 value 값#을 day로 바꾸어주어야 한다. 
-                     this.value = 'day';
-                     // 이 웹페이지에 있는 모든 a 태그의 폰트 색을 white로 바꾸고 싶다.
-                     var links = document.querySelectorAll('a');
-                     var i=0;
-                     while(i<links.length)
-                     {
-                         links[i].style.color = 'white';
-                         i = i + 1;
-                     }
-
-                }
-                // night가 아니라면
-                else{
-                    body.style.backgroundColor = 'white';
-                    body.style.color = 'black';
-                    this.value = 'night';
-
-                    // 이 웹페이지에 있는 모든 a 태그의 폰트 색을 white로 바꾸고 싶다.
-                     var links = document.querySelectorAll('a');
-                     var i=0;
-                     while(i<links.length)
-                     {
-                         links[i].style.color = 'black';
-                         i = i + 1;
-                     }
-
-                }
-                
-                
-                
+              toggle();
             ">
-
-
-            <!-- <input type="button" value="night" onclick="
-                 var body = document.querySelector('body');
-                 body.style.backgroundColor = 'white';
-                 body.style.color = 'black';
-            ">
-            <input type="button" value="day" onclick="
-                 var body = document.querySelector('body');
-                 body.style.backgroundColor = 'black';
-                 body.style.color = 'white';
-            "> -->
-            <!-- body 태그의 스타일 속성을 Javascript로 추가?  -->
-
-
-            <!-- <input type="button" value="night" onclick="
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            ">
-            <input type="button" value="day" onclick="
-              document.querySelector('body').style.backgroundColor = 'white';
-              document.querySelector('body').style.color = 'black';
-              "> -->
-
 
             <h2>JAVAScript</h2>
             JAVAScript is Lorem, ipsum.
