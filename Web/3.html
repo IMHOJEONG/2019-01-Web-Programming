@@ -34,15 +34,34 @@
                      body.style.color = 'white';
                      // + 이 버튼의 value 값#을 day로 바꾸어주어야 한다. 
                      this.value = 'day';
+                     // 이 웹페이지에 있는 모든 a 태그의 폰트 색을 white로 바꾸고 싶다.
+                     var links = document.querySelectorAll('a');
+                     var i=0;
+                     while(i<links.length)
+                     {
+                         links[i].style.color = 'white';
+                         i = i + 1;
+                     }
+
                 }
                 // night가 아니라면
                 else{
                     body.style.backgroundColor = 'white';
                     body.style.color = 'black';
-                    this.value = 'night'
+                    this.value = 'night';
+
+                    // 이 웹페이지에 있는 모든 a 태그의 폰트 색을 white로 바꾸고 싶다.
+                     var links = document.querySelectorAll('a');
+                     var i=0;
+                     while(i<links.length)
+                     {
+                         links[i].style.color = 'black';
+                         i = i + 1;
+                     }
+
                 }
                 
-
+                
                 
             ">
 
