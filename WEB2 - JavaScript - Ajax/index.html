@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>WEB1 - Welcome</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
+    <script src="fetch-master/fetch.js"></script>
+    <!-- 자문자답입니다만;;
+    다음 링크는 해당 이슈 관련 페이지이구요 https://github.com......656
+    영어와 지식이 부족해서 자세한 내용은 이해하기 어렵...;
+    해결책은
+    fetch.js파일을 직접 로드하는 방법을 <script src="fetch/fetch.js"></script>
+    cdn을 통해 다음 두줄의 코드로 로드하시면 해결됩니다.
+    <script src=https://cdn.jsdelivr.net/npm/promise-polyfill@8.1/dist/polyfill.min.js></script>
+    <script src=https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0/dist/fetch.umd.min.js></script>
+    
+    P.S: 테스트환경은 IE 11.472.171340.0 입니다. -->
+
+    <script src=https://cdn.jsdelivr.net/npm/promise-polyfill@8.1/dist/polyfill.min.js></script>
+    <script src=https://cdn.jsdelivr.net/npm/whatwg-fetch@3.0/dist/fetch.umd.min.js></script>
+</head>
+
+<body>
+    <h1><a href="#!welcome">WEB</a></h1>
+    <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+    <ol id="nav">
+        <!-- 데이터를 분리 -->
+        <!-- 중복이 발생 중 ㅠㅠ, 함수로 만들자 -->
+    </ol>
+    <article>
+
+    </article>
+    <script>
+        function fetchPage(name) {
+            fetch(name).then(function(response) {
+                response.text().then(function(text) {
+                    document.querySelector('article').innerHTML = text;
+                })
+            });
+        }
+        // 코드의 가독성 증가 및 유지보수가 쉬워짐
+
+        if (location.hash) {
+            fetchPage(location.hash.substr(2));
+            // 두 번째 이후 글자를 얻어온다.
+        } else {
+            fetchPage('welcome');
+        }
+
+        fetch('list').then(function(response) {
+            response.text().then(function(text) {
+                //<li><a href="#!html" onclick=" fetchPage('html');">HTML</a></li>
+                // 위처럼 자동완성되게 해보자
+                // console.log(text);
+                // 문자열 데이터를 반복적으로 하는 배열로 바꾸면 편해짐
+                // how to make array from string in javascript 검색
+                var items = text.split(','); // text에는 문자열을 ,를 기준으로 하나하나 쪼개 배열로 만듬
+
+                var i = 0;
+                var tags = ''; // 빈 문자열 만듬
+                while (i < items.length) {
+                    var item = items[i];
+                    // items 내부 값에 공백, 줄바꿈이 되어있다면
+                    // how to remove front back white space in javascript 검색
+                    item = item.trim();
+                    console.log(item)
+                    var tag = '<li><a href="#!' + item + '" onclick="fetchPage(\'' + item + '\')">' + item + '</a></li>';
+                    tags = tags + tag;
+                    i++;
+                }
+                console.log(items);
+                // 사용자 입장에선 list에만 집중하면 됨
+
+                document.querySelector('#nav').innerHTML = tags;
+            })
+
+        })
+    </script>
+</body>
+
+</html>

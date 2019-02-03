@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <article>
+
+    </article>
+    <input type="button" value="fetch" onclick="
+    
+        // fetch('css').then(function(response){
+        //     response.text().then(function(text){
+        //         document.querySelector('article').innerHTML = text;
+        //     })
+
+        // })
+
+       // fetch('html');
+            // fetch 함수 - 첫 번째 인자로 온 것을 서버로 요청함 
+            // 적당한 데이터를 꺼내주어서 응답해야 하는데, 많은 시간이 걸린다고 하면,
+            // 서버가 응답할 때까지 다른일을 하게 하는 것 
+
+        // function callbackme(){
+        //     console.log('response end');
+        // }    밑과 같은 의미
+
+        callbackme = function(){
+            console.log('response end');
+        }
+
+        // Asynschronous - 비동기
+        // 비동기 - 실행되는 중 다른 코드가 실행되는 것  
+        //fetch('html').then(callbackme); - 같은 의미
+        fetch('html').then(function(response){
+            console.log(response);
+            console.log(response.status);
+            if(response.status == '404')
+            {
+                alert('Not found')
+            }
+        }); 
+
+            // fetch api야 응답이 끝나면 callbackme 함수를 실행시켜줘    
+        console.log(1);
+        console.log(2);
+            // then을 통해 callbackme 함수 요청 후 
+            // 1,2 출력 후 웹 브라우저가 응답받는 거 끝나면 callbackme값 호출됨 
+   
+        // then 안에 function이 들어가 있는데, => 익명함수(이름이 없는함수)(then 안에서만 독점적으로 사용,
+        // 이름을 가질 필요가 없음)
+    ">
+</body>
+
+</html>

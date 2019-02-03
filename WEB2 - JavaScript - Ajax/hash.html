@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <a href="#three">three</a>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum dicta libero sit inventore omnis necessitatibus temporibus eius vero in iste voluptate, exercitationem itaque laborum unde aspernatur aperiam qui quae veritatis earum corporis, obcaecati
+        perspiciatis. Repudiandae eligendi beatae in sunt neque mollitia, ipsa debitis distinctio asperiores enim eum aspernatur, optio blanditiis corrupti laboriosam quam et doloremque ducimus repellat officia, accusamus veritatis natus. Perspiciatis,
+        hic ut fugit optio voluptas molestiae in doloribus natus totam rem sed nobis excepturi distinctio sequi maxime quidem. Aliquam deserunt, reiciendis doloribus ad reprehenderit explicabo eos tempora a quam officiis quibusdam iste quas harum beatae
+        voluptatem molestias facilis?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum dicta libero sit inventore omnis necessitatibus temporibus eius vero in iste voluptate, exercitationem itaque laborum unde aspernatur aperiam qui quae veritatis earum corporis, obcaecati
+        perspiciatis. Repudiandae eligendi beatae in sunt neque mollitia, ipsa debitis distinctio asperiores enim eum aspernatur, optio blanditiis corrupti laboriosam quam et doloremque ducimus repellat officia, accusamus veritatis natus. Perspiciatis,
+        hic ut fugit optio voluptas molestiae in doloribus natus totam rem sed nobis excepturi distinctio sequi maxime quidem. Aliquam deserunt, reiciendis doloribus ad reprehenderit explicabo eos tempora a quam officiis quibusdam iste quas harum beatae
+        voluptatem molestias facilis?
+    </p>
+    <p id="three">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum dicta libero sit inventore omnis necessitatibus temporibus eius vero in iste voluptate, exercitationem itaque laborum unde aspernatur aperiam qui quae veritatis earum corporis, obcaecati
+        perspiciatis. Repudiandae eligendi beatae in sunt neque mollitia, ipsa debitis distinctio asperiores enim eum aspernatur, optio blanditiis corrupti laboriosam quam et doloremque ducimus repellat officia, accusamus veritatis natus. Perspiciatis,
+        hic ut fugit optio voluptas molestiae in doloribus natus totam rem sed nobis excepturi distinctio sequi maxime quidem. Aliquam deserunt, reiciendis doloribus ad reprehenderit explicabo eos tempora a quam officiis quibusdam iste quas harum beatae
+        voluptatem molestias facilis?
+    </p>
+    <!-- URL을 통해 접근하게 하는 것 => hash
+    id는 약속! 세 번째 문단은 여기서 fragment, three를 fragment identifier  -->
+
+    <!-- 다른 페이지를 로드해서 시작되는 페이지를 세팅할 수 있어
+    how to get hash from url javascript 검색 ㄱㄱ
+    -->
+    <script>
+        if (window.location.hash) { // window 생략 가능
+            // location.hash가 #three를 가리킨다는 것을 알 수 있어
+            // JavaScript String substring() Method 검색
+            console.log(location.hash.substr(1));
+            // Fragment exists
+        } else {
+            // Fragment doesn't exist
+        }
+    </script>
+</body>
+
+</html>
